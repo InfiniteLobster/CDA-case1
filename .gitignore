@@ -1,0 +1,11 @@
+#ignoring temporary files
+*.asv 
+*.log 
+*~ 
+#ignoring generated binaries (MATLAB executables)
+*.mexmaci64 
+*.mexw64 
+*.mexa64 
+#ignoring data folders
+/data/
+/docs/
