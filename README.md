@@ -2,40 +2,19 @@
 
 A short description of the repository
 
+## Coookiecutter info
 
+This structure was created by modifying this [cookiecutter template](https://github.com/InfiniteLobster/cookiecutter-matlab-project)
 
 ## Installation
 
 ```bash
-git clone <link to repo>
+git clone https://github.com/InfiniteLobster/CDA-case1/
 ```
-
-## Usage
-
-
-```matlab
-result = main();
-```
-
-
-
-## Examples
-
-See the `examples/` directory for usage examples.
-
-## Testing
-
-```matlab
-runtests('tests')
-```
-
-## Requirements
-
-- MATLAB R2025a or later
 
 ## Author
 
-Your Name
+s2537111 - [InfiniteLobster](https://github.com/InfiniteLobster/)
 
 ## Version
 
