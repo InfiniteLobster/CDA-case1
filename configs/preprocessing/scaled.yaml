@@ -1,0 +1,3 @@
+flag_scale: true
+num_strat: "median"
+cat_strat: "most_frequent"
