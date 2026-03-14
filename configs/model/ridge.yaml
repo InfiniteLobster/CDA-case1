@@ -1,0 +1,5 @@
+defaults:
+  - params: ridge_default
+  - _self_
+
+name: ridge

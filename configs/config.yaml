@@ -1,0 +1,8 @@
+defaults:
+  - dataset: base
+  - preprocessing: scaled   # or unscaled- num_strat
+  - model: ridge
+  - logger: wandb
+  - _self_
+
+seed: 42

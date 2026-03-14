@@ -1,0 +1,6 @@
+path: data/case1Data.csv
+
+target_col: y
+
+num_prefix: x_
+cat_prefix: C_
