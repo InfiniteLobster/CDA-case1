@@ -1,5 +1,5 @@
 #--------------------Libraries--------------------#
-#
+#for sklearn preproccessing
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
