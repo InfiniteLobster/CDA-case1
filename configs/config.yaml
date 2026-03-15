@@ -1,8 +1,14 @@
 defaults:
   - dataset: base
-  - preprocessing: scaled   # or unscaled- num_strat
-  - model: ridge
   - logger: wandb
   - _self_
 
 seed: 42
+
+split:
+  test_size: 0.2
+
+cv:
+  n_splits: 5
+  shuffle: true
+  scoring: neg_root_mean_squared_error
