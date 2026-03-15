@@ -5,14 +5,14 @@ import pandas as pd
 from omegaconf import DictConfig
 #--------------------Code--------------------#
 #loader function for training dataset
-def load_data_train(data_path:str,target_col:str):
+def load_data(data_path:str,target_col:str):
     #Loading datasets
     train_df = pd.read_csv(data_path)
     #Spliting features and target
-    y_train = train_df[target_col]
-    X_train = train_df.drop(columns=[target_col])
+    y = train_df[target_col]
+    X = train_df.drop(columns=[target_col])
     #returnign output
-    return y_train, X_train 
+    return y, X
 #loading function for prediction dataset (goal of the project)
 def load_data_predi(data_path):
     #Loading datasets
@@ -29,9 +29,9 @@ def load_data_cfg(cfg_dataset:DictConfig):
     num_prefix = cfg_dataset.num_prefix
     cat_prefix = cfg_dataset.cat_prefix
     #getting data
-    y_train, X_train  = load_data_train(data_path, target_col)
+    y, X  = load_data(data_path, target_col)
     #getting list of which columns hold categorical and numerical data
-    names_cat_cols = [col for col in X_train.columns if col.startswith(cat_prefix)]
-    names_num_cols = [col for col in X_train.columns if col.startswith(num_prefix)]
+    names_cat_cols = [col for col in X.columns if col.startswith(cat_prefix)]
+    names_num_cols = [col for col in X.columns if col.startswith(num_prefix)]
     #returnign output
-    return  y_train, X_train, names_num_cols, names_cat_cols
+    return  y, X, names_num_cols, names_cat_cols

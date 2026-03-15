@@ -9,3 +9,6 @@
 #ignoring data folders
 /data/
 /docs/
+/outputs/
+/wandb/
+src/case1/__pycache__/

@@ -1,4 +1,4 @@
-path: data/case1Data.csv
+path: data/data_raw/case1Data.csv
 
 target_col: y
 

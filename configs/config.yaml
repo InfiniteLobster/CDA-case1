@@ -1,6 +1,7 @@
 defaults:
   - dataset: base
   - logger: wandb
+  - search: default
   - _self_
 
 seed: 42
@@ -11,4 +12,4 @@ split:
 cv:
   n_splits: 5
   shuffle: true
-  scoring: neg_root_mean_squared_error
+  scoring: neg_root_mean_squared_error  
