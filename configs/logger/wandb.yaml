@@ -1,3 +1,5 @@
 name: wandb
 entity: CDA-case1
 project: Test
+mode: online
+init_timeout: 1000

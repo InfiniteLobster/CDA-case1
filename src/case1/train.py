@@ -122,6 +122,7 @@ def start_wandb_run(cfg: DictConfig, run_cfg: dict, job_type: str):
         project=cfg.logger.project,
         entity=cfg.logger.entity,
         group=cfg.logger.get("group", None),
+        mode=cfg.logger.get("mode", "online"),
         job_type=job_type,
         #config part of wandb info
         config={
@@ -133,6 +134,7 @@ def start_wandb_run(cfg: DictConfig, run_cfg: dict, job_type: str):
             "preprocess": run_cfg["preprocess"],#different extraction due to how run config is created
         },
         settings=wandb.Settings(
+            init_timeout=cfg.logger.get("init_timeout", 180),
             x_disable_stats=True,
             x_disable_meta=True,
             x_disable_machine_info=True,
