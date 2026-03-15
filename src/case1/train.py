@@ -6,12 +6,13 @@ from hydra.core.hydra_config import HydraConfig
 import hydra.utils as hydra_utils
 #wandb
 import wandb
-#
+#dealing with files and paths etc.
 import os
 import itertools
 import json
 import joblib
 from copy import deepcopy
+#data handling
 import pandas as pd
 import numpy as np
 #sklearn
