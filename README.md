@@ -12,9 +12,10 @@ This structure was created by modifying this [cookiecutter template](https://git
 git clone https://github.com/InfiniteLobster/CDA-case1/
 ```
 
-## Author
+## Authors
 
-s2537111 - [InfiniteLobster](https://github.com/InfiniteLobster/)
+s253711 - [InfiniteLobster](https://github.com/InfiniteLobster/)
+s260067 - [yukthadabke](https://github.com/yukthadabke)
 
 ## Version
 
