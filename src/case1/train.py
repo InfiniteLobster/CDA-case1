@@ -18,7 +18,7 @@ import numpy as np
 #sklearn
 from sklearn.model_selection import KFold, train_test_split, cross_validate
 from sklearn.metrics import root_mean_squared_error as rmse
-#--------------------Code--------------------#
+#--------------------Functions--------------------#
 #functions for converting search space from yaml to list of concrete model configs for sweeping
 def expand_search_space_dim(space_dict):
     #conerting DictConfig to regular dict for easier handling and logging in wandb (fails downstream without it))
@@ -144,7 +144,7 @@ def start_wandb_run(cfg: DictConfig, run_cfg: dict, job_type: str):
     )
     #returning wandb run object
     return run#currently not used, but leaving for structure and possible future use
-#main 
+#--------------------Code--------------------#
 @hydra.main(config_path="../../configs", config_name="config", version_base=None)
 def main(cfg: DictConfig) -> None:
     #importing code form modules (seprate files for better orgnization of logic)

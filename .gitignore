@@ -9,6 +9,9 @@
 #ignoring data folders
 /data/
 /docs/
+/models/
 /outputs/
 /wandb/
 src/case1/__pycache__/
+#ignoring data files
+*.csv
