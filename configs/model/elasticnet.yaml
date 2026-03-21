@@ -1,5 +1,0 @@
-defaults:
-  - params: elasticnet_default
-  - _self_
-
-name: elasticnet
