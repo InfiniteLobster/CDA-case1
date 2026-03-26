@@ -1,5 +1,5 @@
 name: wandb
 entity: CDA-case1
-project: Test
+project: Fifth_Sweep
 mode: online
 init_timeout: 1000

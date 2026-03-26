@@ -186,11 +186,6 @@ def main(cfg: DictConfig) -> None:
                 "cv_train_rmse_mean": result["cv_train_rmse_mean"],
             }
         )
-        #converting fold results into wandb table for better visualization in the dashboard 
-        fold_table = wandb.Table(columns=["fold", "rmse"])#creating variable
-        for i, fold_rmse in enumerate(result["cv_rmse_folds"], start=1):#filling variable 
-            fold_table.add_data(i, fold_rmse)#each fold
-        wandb.log({"cv_rmse_folds_table": fold_table})#logging fold results as table in wandb
         #adding results of current run to program results (not wandb logging)
         sweep_results.append(
             {
@@ -201,10 +196,10 @@ def main(cfg: DictConfig) -> None:
         )
         #finishing current run after logging all needed info
         wandb.finish()
-    #getting best configuration based on cv mean rmse (the main metric for model selection) from all runs in sweep results
+    #getting best configuration based on test rmse (the main metric for model selection) from all runs in sweep results
     best_result = min(sweep_results, key=lambda x: x["cv_rmse_mean"])
     best_model_cfg = best_result["model_cfg"]
-    #making run for final model training and evaluation with best configuration (based on cv mean rmse) on test set and logging it in wandb
+    #making run for final model training and evaluation with best configuration (based on test rmse) on test set and logging it in wandb
     start_wandb_run(cfg, best_model_cfg, job_type="final")
     #creating final pipeline
     final_pipe = build_pipeline_cfg(
