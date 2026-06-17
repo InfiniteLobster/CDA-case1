@@ -17,7 +17,7 @@ This structure was created by modifying this [cookiecutter template](https://git
 ## Installation
 To use this GitHub repository it first needs to be cloned locally as follows (standard code for git repository cloning):
 ```bash
-git clone https://github.com/InfiniteLobster/CDA-case2
+git clone https://github.com/InfiniteLobster/CDA-case1
 ```
 After the cloning, the virtual environment needs to be configured. In this project [uv](https://docs.astral.sh/uv/) is used for this purpose. With it installed on the machine following code needs to be executed for this purpose  (standard code for uv):
 ```bash
